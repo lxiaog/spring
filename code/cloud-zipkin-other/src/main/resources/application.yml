@@ -1,0 +1,14 @@
+server:
+  port: 8772
+spring:
+  application:
+    name: cloud-zipkin-other
+  zipkin:
+    base-url: http://localhost:8888 #zipkin 管理端
+
+eureka:
+  client:
+    service-url:
+      #注册中心地址
+      defaultZone: http://localhost:8761/eureka/
+

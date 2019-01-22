@@ -1,0 +1,20 @@
+server:
+  port: 8768
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      label: master #配置仓库的分支
+      server:
+        git:
+          uri: https://github.com/lxiaog/SpringCloud # #配置git仓库地址
+          search-paths: config # 配置仓库路径
+          username:
+          password:
+eureka:
+  client:
+    service-url:  #设置注册中心的交互地址
+      defaultZone: http://localhost:8761/eureka/
+    register-with-eureka: true #表示自己是否注册到注册中心 默认true
+    fetch-registry: true #表示是否从注册中心获取数据

@@ -1,0 +1,20 @@
+server:
+  port: 8769
+spring:
+  application:
+    name: config-client
+  cloud:
+    config:
+      label: master
+      profile: dev #环境类型 dev开发环境 test 测试 pro正式环境
+#      uri: http://localhost:8768/
+      discovery:
+        enabled: true #从配置中心读取文件
+        service-id: config-server # 配置中心服务器名称，适用配置中心集群，通过负载均衡，实现高可用
+
+#eureka:
+#  client:
+#    service-url:  #设置注册中心的交互地址
+#      defaultZone: http://localhost:8761/eureka/ 注册中心
+#    register-with-eureka: true #表示自己是否注册到注册中心 默认true
+#    fetch-registry: true #表示是否从注册中心获取数据

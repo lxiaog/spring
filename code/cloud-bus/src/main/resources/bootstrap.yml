@@ -1,0 +1,28 @@
+server:
+  port: 8770
+spring:
+  application:
+    name: cloud-bus
+  cloud:
+    config:
+      label: master
+      profile: dev #环境类型 dev开发环境 test 测试 pro正式环境
+#      uri: http://localhost:8768/
+      discovery:
+        enabled: true #从配置中心读取文件
+        service-id: config-server # 配置中心服务器名称，适用配置中心集群，通过负载均衡，实现高可用
+    bus:
+      enabled: true
+      trace:
+        enabled: true
+  rabbitmq:
+    host: localhost
+    port: 15672
+    username: guest
+    password: guest
+management:
+  endpoints:
+    web:
+      exposure:
+        include: info
+
