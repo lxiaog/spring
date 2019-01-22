@@ -1,3 +1,4 @@
+foo: version4
 server:
   port: 8767 # 项目端口
 
