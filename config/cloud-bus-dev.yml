@@ -1,0 +1,12 @@
+server:
+  port: 8770 # 项目端口
+
+spring:
+  application:
+    name: cloud-bus #项目名称 唯一性
+
+eureka:
+  client:
+    service-url:
+      #注册中心地址
+      defaultZone: http://localhost:8761/eureka/
