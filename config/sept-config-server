@@ -1,0 +1,16 @@
+spring:
+  profiles:
+    active: dev
+
+---
+spring:
+  profiles: dev
+  application:
+    name: dept-config-server-dev
+
+
+---
+spring:
+  profiles: test
+  application:
+    name: dept-config-server-test
