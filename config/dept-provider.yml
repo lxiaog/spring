@@ -49,7 +49,7 @@ eureka:
   client:
     service-url:
       #defaultZone:  http://localhost:9000/eureka
-      defaultZone:  http://localhost:9000/eureka,http://localhost:9001/eureka,http://localhost:9002/eureka
+      defaultZone:  http://localhost:9001/eureka
   #instance:
     # prefer-ip-address: true  # 显示id地址 2.x之后默认显示IP地址 2.0以前版本不显示
     # instance-id: dept-provider  # 注册中心显示的名称    2.x默认 ip:serviceName:port  2.0之前版本是电脑名称：serviceName:port
