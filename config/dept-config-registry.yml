@@ -1,0 +1,32 @@
+spring:
+  profiles:
+    active:
+      - dev
+
+---
+server:
+  port: 9001
+spring:
+  application:
+    name: dept-config-registry
+  profiles: dev
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://localhost:9001/eureka/
+
+---
+server:
+  port: 9001
+spring:
+  application:
+    name: dept-config-registry
+  profiles: test
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://localhost:9001/eureka/
