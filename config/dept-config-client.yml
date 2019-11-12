@@ -7,11 +7,11 @@ spring:
 spring:
   profiles: dev
   application:
-    name: dept-config-server-dev
+    name: dept-config-client-dev
 
 
 ---
 spring:
   profiles: test
   application:
-    name: dept-config-server-test
+    name: dept-config-client-test
