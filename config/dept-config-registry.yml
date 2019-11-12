@@ -1,7 +1,7 @@
 spring:
   profiles:
     active:
-      - dev
+    - dev
 
 ---
 server:
@@ -19,7 +19,7 @@ eureka:
 
 ---
 server:
-  port: 9001
+  port: 9002
 spring:
   application:
     name: dept-config-registry
@@ -29,4 +29,4 @@ eureka:
     register-with-eureka: false
     fetch-registry: false
     service-url:
-      defaultZone: http://localhost:9001/eureka/
+      defaultZone: http://localhost:9002/eureka/
